@@ -1,0 +1,4 @@
+repository "Bird fly@DarkSoulz331@cloud"
+  path "/"
+    br "/main"
+    co "/main"

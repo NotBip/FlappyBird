@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {   
-    private float bulletMoveSpeed = 15f; 
+    private float bulletMoveSpeed = 30f; 
     private float lifeTime = 2; 
 
     // Start is called before the first frame update
@@ -19,6 +19,12 @@ public class Bullets : MonoBehaviour
     {   
         transform.position = transform.position + (Vector3.right * bulletMoveSpeed) * Time.deltaTime; 
         Destroy(gameObject, lifeTime);
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision) 
+    {   
+        Destroy(gameObject);
     }
 
 }
